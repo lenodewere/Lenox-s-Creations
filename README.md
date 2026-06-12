@@ -23,12 +23,12 @@ Lenox's Creations is a community space for poets to share their writing and for 
 
 ## Getting Started
 
-### Prerequisites
+## Prerequisites
 
 - Node.js (v18 or later)
 - npm
 
-### Installation
+## Installation
 
 1. Clone the repository
    ```bash
@@ -47,7 +47,7 @@ Lenox's Creations is a community space for poets to share their writing and for 
 
 6. Open http://localhost:3000 in your browser
 
-### License
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
