@@ -1,20 +1,58 @@
 :root {
   color-scheme: light;
-  color: #222;
-  background: #f8f7f3;
+  color: #172036;
+  background: #f6f2eb;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --surface: rgba(255, 255, 255, 0.90);
+  --surface-soft: rgba(255, 255, 255, 0.75);
+  --surface-strong: rgba(255, 255, 255, 1);
+  --text-strong: #172036;
+  --text-muted: #5d6673;
+  --text-soft: #6c7580;
+  --primary: #2c4b7a;
+  --primary-soft: #dbe7fb;
+  --accent: #d88c31;
+  --accent-soft: #fff1dd;
+  --border: rgba(44, 75, 122, 0.18);
+  --shadow-lg: 0 28px 80px rgba(38, 45, 69, 0.12);
+  --shadow-md: 0 18px 42px rgba(38, 45, 69, 0.08);
+  --shadow-sm: 0 10px 24px rgba(38, 45, 69, 0.06);
+  --radius: 24px;
+  scroll-behavior: smooth;
 }
 
 * {
   box-sizing: border-box;
 }
 
+*:focus-visible {
+  outline: 3px solid rgba(44, 75, 122, 0.24);
+  outline-offset: 3px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
-  background: linear-gradient(180deg, #fffdfa 0%, #f3f1ec 100%);
-  color: #1f1f1f;
-  line-height: 1.7;
+  background: radial-gradient(circle at top left, rgba(255, 205, 180, 0.25), transparent 24%),
+              radial-gradient(circle at bottom right, rgba(44, 75, 122, 0.08), transparent 20%),
+              linear-gradient(180deg, #fffdfa 0%, #f3f1ec 100%);
+  color: var(--text-strong);
+  line-height: 1.75;
+  font-feature-settings: "cv05" 1, "liga" 1;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: rgba(220, 185, 110, 0.24);
+  color: var(--text-strong);
 }
 
 img {
@@ -67,6 +105,56 @@ nav {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+}
+
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid rgba(44, 75, 122, 0.2);
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 14px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.nav-toggle span,
+.nav-toggle span::before,
+.nav-toggle span::after {
+  display: block;
+  width: 1.3rem;
+  height: 2px;
+  background: #2c4b7a;
+  border-radius: 999px;
+  position: relative;
+}
+
+.nav-toggle span::before,
+.nav-toggle span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.nav-toggle span::before {
+  top: -6px;
+}
+
+.nav-toggle span::after {
+  top: 6px;
+}
+
+.site-header.nav-open nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.site-header.nav-open .nav-toggle {
+  background: #2c4b7a;
 }
 
 .site-footer {
@@ -602,6 +690,20 @@ textarea {
     align-items: flex-start;
   }
 
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+  }
+
+  .header-inner {
+    width: 100%;
+    align-items: center;
+  }
+
   .hero-copy h1,
   .page-intro h1,
   .poem-hero h1,
@@ -613,7 +715,7 @@ textarea {
   }
 }
 
-..content-block {
+.content-block {
   margin-bottom: 2rem;
   background: #fff;
   border-radius: 20px;
@@ -685,8 +787,185 @@ textarea {
     align-items: flex-start;
   }
 
-  .hero h1,
-  .page-intro h1 {
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+  }
+
+  .header-inner {
+    width: 100%;
+    align-items: center;
+  }
+
+  .hero-copy h1,
+  .page-intro h1,
+  .poem-hero h1,
+  .author-hero h1,
+  .contact-hero h1,
+  .submit-hero h1,
+  .about-hero h1 {
     font-size: 2.2rem;
+  }
+}
+
+.nav-toggle {
+  transition: background 0.3s ease, transform 0.35s ease;
+}
+
+.nav-toggle span,
+.nav-toggle span::before,
+.nav-toggle span::after {
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.nav-toggle.active span {
+  transform: rotate(45deg);
+}
+
+.nav-toggle.active span::before {
+  transform: rotate(90deg) translateX(0);
+  top: 0;
+}
+
+.nav-toggle.active span::after {
+  opacity: 0;
+}
+
+.site-header.nav-open nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  margin-top: 1rem;
+  animation: fadeSlide 0.35s ease;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.button,
+button,
+.subscribe-form button,
+.submit button {
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary), #335d9d);
+  padding: 1rem 1.4rem;
+  border-radius: 999px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+button:hover,
+.button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+  box-shadow: 0 18px 40px rgba(44, 75, 122, 0.18);
+}
+
+.glass-card,
+.glass-panel,
+.panel,
+.collection-card,
+.poem-card,
+.contact-card,
+.profile-panel,
+.submit-note,
+.hero-panel,
+.form-panel,
+.poem-detail,
+.author-stats,
+.poem-stats {
+  background: var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  box-shadow: var(--shadow-md);
+}
+
+.feature-card,
+.collection-card,
+.poem-card,
+.contact-card,
+.related-cards > *,
+.author-poems > * {
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.feature-card:hover,
+.collection-card:hover,
+.poem-card:hover,
+.contact-card:hover,
+.related-cards > *:hover,
+.author-poems > *:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 32px 70px rgba(38, 45, 69, 0.12);
+  border-color: rgba(44, 75, 122, 0.22);
+}
+
+.hero-panel {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(211, 174, 110, 0.16), transparent 35%);
+  pointer-events: none;
+}
+
+.hero-panel > * {
+  position: relative;
+}
+
+.glow-heading {
+  display: inline-block;
+  color: var(--primary);
+  text-shadow: 0 0 18px rgba(44, 75, 122, 0.14);
+}
+
+.subtle-border {
+  border: 1px solid rgba(44, 75, 122, 0.08);
+}
+
+.stat-pill {
+  display: inline-flex;
+  gap: 0.55rem;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  background: rgba(44, 75, 122, 0.06);
+  color: var(--text-strong);
+  font-weight: 700;
+}
+
+.label-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.95rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  background: var(--accent-soft);
+  color: #8a5d23;
+}
+
+@media (hover: hover) {
+  .nav-toggle:hover {
+    transform: scale(1.03);
   }
 }
