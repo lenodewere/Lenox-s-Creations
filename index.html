@@ -8,47 +8,110 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
+    <div class="container header-inner">
       <a href="index.html" class="logo">Lenox's Creations</a>
       <nav>
         <a href="browse.html">Library</a>
         <a href="submit.html">Submit</a>
         <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <section class="hero">
-      <p class="eyebrow">A poetry website for readers and writers</p>
-      <h1>Discover poems that feel like a quiet conversation.</h1>
-      <p>Browse fresh voice, read community work, and share your own poems in a calm, readable space.</p>
-      <div class="hero-actions">
-        <a class="button" href="browse.html">Explore the library</a>
-        <a class="button button-secondary" href="submit.html">Submit a poem</a>
+  <main>
+    <section class="hero-grid container">
+      <div class="hero-copy">
+        <span class="eyebrow">A modern poetry website</span>
+        <h1>Read, discover, and share poems in a calm, immersive space.</h1>
+        <p>Lenox's Creations blends curated collections, author spotlights, and fresh community writing into a poetic reading experience.</p>
+        <div class="hero-actions">
+          <a class="button" href="browse.html">Browse poems</a>
+          <a class="button button-secondary" href="submit.html">Share your work</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel">
+        <div class="panel-head">
+          <span>Featured poem</span>
+          <span class="badge">New</span>
+        </div>
+        <h2 class="panel-title">The Quiet Night</h2>
+        <p class="panel-author">by Esi</p>
+        <p class="panel-text">Soft lines that move slowly through memory, longing, and the small light of evening. A perfect fit for readers searching for a calm, reflective moment.</p>
+        <a href="poem.html" class="panel-link">Read the full poem →</a>
+      </aside>
+    </section>
+
+    <section class="content-split container">
+      <article class="feature-card glass-card">
+        <h3>Curated collections</h3>
+        <p>Explore themed poem groups, from nightly calm to bright summer verse.</p>
+      </article>
+      <article class="feature-card glass-card">
+        <h3>Poet spotlight</h3>
+        <p>Meet voices from the community with author bios, recent poems, and creative stories.</p>
+      </article>
+      <article class="feature-card glass-card">
+        <h3>Writing prompt</h3>
+        <p>Try the weekly prompt and join the community challenge with your own short poem.</p>
+      </article>
+    </section>
+
+    <section class="mood-section container">
+      <h2>Explore by mood</h2>
+      <div class="mood-chips">
+        <span class="chip">Serene</span>
+        <span class="chip">Heartfelt</span>
+        <span class="chip">Dreamy</span>
+        <span class="chip">Bold</span>
+        <span class="chip">Nature</span>
+        <span class="chip">Love</span>
       </div>
     </section>
 
-    <section class="feature-cards">
-      <article class="card">
-        <h2>Featured poems</h2>
-        <p>Highlight your latest poems and help readers find the best work quickly.</p>
-      </article>
-      <article class="card">
-        <h2>Browse by mood</h2>
-        <p>Give readers tag and search tools so they can find poems by feeling, style, or author.</p>
-      </article>
-      <article class="card">
-        <h2>Author profiles</h2>
-        <p>Share poet bios, published work, and a page for each writer’s voice.</p>
-      </article>
+    <section class="collections container">
+      <div class="section-header">
+        <div>
+          <h2>Unique features</h2>
+          <p>Designed to make your poetry website feel personal, modern, and memorable.</p>
+        </div>
+      </div>
+      <div class="collection-grid">
+        <article class="collection-card">
+          <span class="collection-tag">Daily prompt</span>
+          <h3>Morning whispers</h3>
+          <p>Start the day with a short writing prompt that invites quiet reflection.</p>
+        </article>
+        <article class="collection-card">
+          <span class="collection-tag">Community</span>
+          <h3>Spotlight poet</h3>
+          <p>Showcase a different author each week, with their story and work on display.</p>
+        </article>
+        <article class="collection-card">
+          <span class="collection-tag">Discovery</span>
+          <h3>Curated themes</h3>
+          <p>Keep readers engaged with rotating mood collections and illustrated pathways.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="subscribe-panel container">
+      <div class="glass-panel">
+        <h2>Stay inspired</h2>
+        <p>Share your email to receive a monthly poem round-up and writing prompts.</p>
+        <form class="subscribe-form">
+          <input type="email" placeholder="Enter your email" aria-label="Email address" />
+          <button class="button" type="button">Subscribe</button>
+        </form>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>Lenox's Creations | A poetry website for readers and writers.</p>
-      <p>Built for calm reading, easy browsing, and sharing poems online.</p>
+    <div class="container footer-inner">
+      <p>Lenox's Creations | A contemporary poetry website for readers and writers.</p>
+      <p>Built for calm browsing, memorable poems, and community sharing.</p>
     </div>
   </footer>
 </body>

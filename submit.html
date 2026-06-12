@@ -14,36 +14,49 @@
         <a href="browse.html">Library</a>
         <a href="submit.html">Submit</a>
         <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <section class="page-intro">
-      <h1>Submit a Poem</h1>
-      <p>Share your words with the community. Fill in the title, poem text, and tags below.</p>
+    <section class="page-hero submit-hero">
+      <div>
+        <h1>Submit a Poem</h1>
+        <p>Share your words with the community. Fill in the title, poem text, and tags below.</p>
+      </div>
+      <div class="hero-panel">
+        <span class="badge">Coming soon</span>
+        <p>Connect this form to a backend later to let poets submit poems directly through the website.</p>
+      </div>
     </section>
 
-    <section class="submit-form">
-      <form>
-        <label>Title</label>
-        <input type="text" placeholder="Poem title" disabled />
+    <section class="submit-wrap">
+      <div class="form-panel">
+        <form>
+          <label>Title</label>
+          <input type="text" placeholder="Poem title" disabled />
 
-        <label>Your name</label>
-        <input type="text" placeholder="Author name" disabled />
+          <label>Your name</label>
+          <input type="text" placeholder="Author name" disabled />
 
-        <label>Poem</label>
-        <textarea rows="10" placeholder="Write or paste your poem here" disabled></textarea>
+          <label>Poem</label>
+          <textarea rows="10" placeholder="Write or paste your poem here" disabled></textarea>
 
-        <label>Tags</label>
-        <input type="text" placeholder="calm, night, love" disabled />
+          <label>Tags</label>
+          <input type="text" placeholder="calm, night, love" disabled />
 
-        <label>Cover image (optional)</label>
-        <input type="file" disabled />
+          <label>Cover image (optional)</label>
+          <input type="file" disabled />
 
-        <p class="form-note">This is a static website example. Connect to a backend later to submit poems.</p>
-        <button type="button" class="button button-secondary" disabled>Submit poem</button>
-      </form>
+          <p class="form-note">This is a static website example. Connect to a backend later to submit poems.</p>
+          <button type="button" class="button button-secondary" disabled>Submit poem</button>
+        </form>
+      </div>
+      <aside class="submit-note">
+        <h2>Why submit?</h2>
+        <p>Your poem can appear in mood collections, author spotlights, and the community library for readers to discover.</p>
+      </aside>
     </section>
   </main>
 

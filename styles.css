@@ -31,6 +31,10 @@ a:hover {
   text-decoration: underline;
 }
 
+main {
+  background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(248,247,243,0.82) 100%);
+}
+
 .container {
   width: min(1100px, calc(100% - 2rem));
   margin: 0 auto;
@@ -71,69 +75,195 @@ nav {
   background: #fffdfa;
 }
 
-.hero {
-  padding: 4rem 0 3rem;
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 4rem 0 2rem;
 }
 
-.eyebrow {
-  margin: 0 0 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
-  font-size: 0.8rem;
-  color: #7a7a7a;
+.hero-copy {
+  max-width: 650px;
 }
 
-.hero h1 {
-  margin: 0 0 1rem;
-  font-size: clamp(2.4rem, 4vw, 4rem);
-  max-width: 760px;
-  line-height: 1.05;
+.hero-panel {
+  padding: 2rem;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 28px 68px rgba(38, 45, 69, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(18px);
 }
 
-.hero p {
-  max-width: 620px;
-  font-size: 1.05rem;
-  color: #505050;
-}
-
-.hero-actions {
+.panel-head {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 1rem;
-  flex-wrap: wrap;
-  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: #5d6776;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
 }
 
-.button {
+.badge {
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background: #e9f2ff;
+  color: #2c4b7a;
+  font-weight: 700;
+}
+
+.panel-title {
+  margin: 1rem 0 0.25rem;
+  font-size: 1.9rem;
+}
+
+.panel-author {
+  margin: 0;
+  color: #7f8a9a;
+}
+
+.panel-text {
+  margin: 1rem 0 1.5rem;
+  color: #4f5665;
+  line-height: 1.8;
+}
+
+.panel-link {
+  font-weight: 700;
+  color: #2c4b7a;
+}
+
+.content-split {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 3rem 0;
+}
+
+.glass-card {
+  padding: 2rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 24px 60px rgba(38, 45, 69, 0.07);
+}
+
+.mood-section {
+  margin-bottom: 3rem;
+}
+
+.mood-section h2 {
+  margin-bottom: 1rem;
+}
+
+.mood-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.chip {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.95rem 1.6rem;
+  padding: 0.8rem 1.25rem;
   border-radius: 999px;
-  border: none;
-  cursor: pointer;
-  background: #2c4b7a;
-  color: white;
+  background: #fcf7ef;
+  color: #7a5e38;
   font-weight: 600;
 }
 
-.button-secondary {
-  background: transparent;
-  color: #2c4b7a;
-  border: 1px solid #2c4b7a;
+.collections {
+  margin-bottom: 3rem;
 }
 
-.feature-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
   gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.collection-card {
+  padding: 2rem;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 18px 42px rgba(38, 45, 69, 0.06);
+  border: 1px solid rgba(43, 62, 89, 0.06);
+}
+
+.collection-tag {
+  display: inline-flex;
+  font-size: 0.8rem;
+  color: #2c4b7a;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.subscribe-panel {
   margin-bottom: 4rem;
 }
 
-.card {
-  padding: 1.75rem;
-  border-radius: 20px;
-  background: #fff;
-  box-shadow: 0 18px 48px rgba(50, 50, 93, 0.08);
+.glass-panel {
+  padding: 2rem;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 24px 60px rgba(38, 45, 69, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+.subscribe-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.subscribe-form input {
+  border-radius: 999px;
+  border: 1px solid rgba(44, 75, 122, 0.15);
+  padding: 1rem 1.25rem;
+}
+
+.subscribe-form button {
+  border-radius: 999px;
+  min-width: 145px;
+}
+
+@media (max-width: 940px) {
+  .hero-grid,
+  .content-split,
+  .collection-grid,
+  .subscribe-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .site-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-grid {
+    padding-top: 2rem;
+  }
+
+  .hero-copy h1,
+  .page-intro h1 {
+    font-size: 2.2rem;
+  }
 }
 
 .card h2 {
@@ -222,6 +352,22 @@ nav {
   margin: 2rem 0;
 }
 
+.submit-wrap {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0 4rem;
+}
+
+.form-panel,
+.submit-note {
+  padding: 2rem;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 24px 60px rgba(38, 45, 69, 0.08);
+}
+
 form {
   display: grid;
   gap: 1rem;
@@ -258,12 +404,134 @@ textarea {
   font-size: 0.95rem;
 }
 
-.content-block {
+.page-hero {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.5rem;
+  align-items: start;
+  margin: 3rem 0 2rem;
+}
+
+.poem-hero,
+.author-hero,
+.contact-hero,
+.submit-hero,
+.about-hero {
+  padding: 1.5rem 0;
+}
+
+.poem-hero .hero-panel,
+.author-hero .hero-panel,
+.contact-hero .hero-panel,
+.submit-hero .hero-panel,
+.about-hero .hero-panel {
+  max-width: 400px;
+}
+
+.poem-stats,
+.author-stats {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 14px 40px rgba(38, 45, 69, 0.06);
+  text-align: right;
+}
+
+.poem-stats span,
+.author-stats strong {
+  display: block;
+}
+
+.author-stats {
+  padding: 1rem 1.5rem;
+}
+
+.author-stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.profile-panel,
+.related-cards,
+.contact-grid,
+.about-grid,
+.collection-grid,
+.core-panels {
+  display: grid;
+  gap: 1rem;
+}
+
+.profile-panel {
+  padding: 2rem;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 24px 60px rgba(38, 45, 69, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.75);
   margin-bottom: 2rem;
+}
+
+.cards-grid {
+  margin-bottom: 3rem;
+}
+
+.contact-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 2rem 0;
+}
+
+.contact-card {
+  padding: 2rem;
+  border-radius: 24px;
   background: #fff;
-  border-radius: 20px;
-  padding: 1.75rem;
-  box-shadow: 0 10px 28px rgba(50, 50, 93, 0.05);
+  box-shadow: 0 18px 42px rgba(38, 45, 69, 0.06);
+  border: 1px solid rgba(43, 62, 89, 0.06);
+}
+
+.contact-card h2 {
+  margin-top: 0;
+}
+
+.contact-block {
+  margin-top: 2rem;
+}
+
+.hero-panel .badge,
+.badge {
+  display: inline-flex;
+  margin-bottom: 1rem;
+}
+
+.hero-panel p,
+.panel-text,
+.profile-panel p,
+.contact-card p,
+.content-block p {
+  color: #4f5665;
+  line-height: 1.8;
+}
+
+.related-grid {
+  margin-bottom: 4rem;
+}
+
+.related-cards {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 940px) {
+  .submit-wrap,
+  .contact-grid,
+  .related-cards,
+  .about-grid,
+  .content-split,
+  .collection-grid,
+  .hero-grid,
+  .page-hero {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 720px) {
@@ -272,8 +540,13 @@ textarea {
     align-items: flex-start;
   }
 
-  .hero h1,
-  .page-intro h1 {
+  .hero-copy h1,
+  .page-intro h1,
+  .poem-hero h1,
+  .author-hero h1,
+  .contact-hero h1,
+  .submit-hero h1,
+  .about-hero h1 {
     font-size: 2.2rem;
   }
-}
+}

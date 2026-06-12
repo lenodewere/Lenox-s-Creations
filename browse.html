@@ -14,34 +14,53 @@
         <a href="browse.html">Library</a>
         <a href="submit.html">Submit</a>
         <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <section class="page-intro">
-      <h1>Library</h1>
-      <p>Search poems, filter by tags, and find the verse you want to read next.</p>
+    <section class="browse-hero">
+      <div>
+        <p class="eyebrow">Library</p>
+        <h1>Find poems by mood, author, or feeling.</h1>
+        <p>Sort by new work, spotlight collections, and explore the community’s best verse.</p>
+      </div>
+      <div class="browse-snapshot">
+        <span class="snapshot-label">Today’s highlights</span>
+        <div class="snapshot-item">
+          <strong>22</strong>
+          <span>new poems</span>
+        </div>
+        <div class="snapshot-item">
+          <strong>8</strong>
+          <span>featured poets</span>
+        </div>
+      </div>
     </section>
 
-    <section class="search-bar">
+    <section class="search-bar modern-search">
       <input type="search" placeholder="Search by title, author, or tag" disabled />
+      <button class="button button-secondary" type="button" disabled>Filter</button>
     </section>
 
-    <section class="poem-list">
-      <article class="poem-card">
+    <section class="poem-grid">
+      <article class="poem-card highlight-card">
+        <span class="tag-pill">Featured</span>
         <h2><a href="poem.html">The Quiet Night</a></h2>
-        <p class="meta">by <a href="author.html">Esi</a> | tags: calm, night, reflection</p>
-        <p>Soft lines that move slowly through memory, longing, and the small light of evening.</p>
+        <p class="meta">by <a href="author.html">Esi</a></p>
+        <p>Soft lines that move slowly through memory and evening light.</p>
       </article>
       <article class="poem-card">
+        <span class="tag-pill">New</span>
         <h2><a href="poem.html">Paper Rivers</a></h2>
-        <p class="meta">by <a href="author.html">Akosua</a> | tags: journey, water, hope</p>
+        <p class="meta">by <a href="author.html">Akosua</a></p>
         <p>A short poem about how words fold into one another like paper in a stream.</p>
       </article>
       <article class="poem-card">
+        <span class="tag-pill">Popular</span>
         <h2><a href="poem.html">Letters to the Moon</a></h2>
-        <p class="meta">by <a href="author.html">Kwame</a> | tags: love, moon, solitude</p>
+        <p class="meta">by <a href="author.html">Kwame</a></p>
         <p>An intimate piece written for late nights and quiet dreaming.</p>
       </article>
     </section>
