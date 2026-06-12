@@ -31,21 +31,30 @@ Lenox's Creations is a community space for poets to share their writing and for 
 ## Installation
 
 1. Clone the repository
+
    ```bash
    git clone https://github.com/lenodewere/Lenox-s-Creations.git
    cd Lenox-s-Creations
+   ```
+
 2. Install Dependencies
    - npm install
-  
+
 3. Setup environment variables
    Create a .env.local file in the root directory:
+
+   ```ini
    NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
    NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-   
-5. Run the development server
-   -npm run dev
+   ```
 
-6. Open http://localhost:3000 in your browser
+4. Run the development server
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open <http://localhost:3000> in your browser
 
 ## License
 
