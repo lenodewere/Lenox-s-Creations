@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Submit a poem — Lenox's Creations</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">Lenox's Creations</a>
+      <nav>
+        <a href="browse.html">Library</a>
+        <a href="submit.html">Submit</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-intro">
+      <h1>Submit a Poem</h1>
+      <p>Share your words with the community. Fill in the title, poem text, and tags below.</p>
+    </section>
+
+    <section class="submit-form">
+      <form>
+        <label>Title</label>
+        <input type="text" placeholder="Poem title" disabled />
+
+        <label>Your name</label>
+        <input type="text" placeholder="Author name" disabled />
+
+        <label>Poem</label>
+        <textarea rows="10" placeholder="Write or paste your poem here" disabled></textarea>
+
+        <label>Tags</label>
+        <input type="text" placeholder="calm, night, love" disabled />
+
+        <label>Cover image (optional)</label>
+        <input type="file" disabled />
+
+        <p class="form-note">This is a static website example. Connect to a backend later to submit poems.</p>
+        <button type="button" class="button button-secondary" disabled>Submit poem</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Lenox's Creations | Share your poetry soon.</p>
+    </div>
+  </footer>
+</body>
+</html>
